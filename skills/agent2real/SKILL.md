@@ -1,9 +1,9 @@
 ---
-name: field-gate
+name: agent2real
 description: Validation method for AI-written code that runs on real hardware (robots, drones, vehicles, any real-time edge system). Stops a coding agent from "solving the test" instead of the problem, and decides which changes can be trusted from the bench and which must earn a field test. Use before calling a change done, before a field test, when tuning parameters, and whenever an agent reports "all tests pass" on code that touches sensors, timing, estimation or control.
 ---
 
-# field-gate — tests pass is where validation starts
+# agent2real — tests pass is where validation starts
 
 A coding agent optimises for the signal you give it. If the signal is "tests green", it will find
 the cheapest way to green, and sometimes that means changing the test instead of fixing the code. This is

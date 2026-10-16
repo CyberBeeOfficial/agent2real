@@ -17,7 +17,7 @@ clean and timing-free, which is exactly where hardware differs.
 
 Machine learning solved this problem decades ago: you **separate the data you fit on from the data
 you judge on**, you **measure noise before you claim a gain**, and you **don't let the learner touch
-the evaluation**. `field-gate` applies the same discipline to coding agents, and adds the one thing
+the evaluation**. `agent2real` applies the same discipline to coding agents, and adds the one thing
 robotics needs on top: an evaluation that includes **real sensors and real time**.
 
 ## What each rung removes

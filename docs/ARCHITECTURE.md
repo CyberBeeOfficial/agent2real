@@ -1,6 +1,6 @@
 # Architecture
 
-`field-gate` is a method and contains no code. This page shows where it sits in an agent's loop and
+`agent2real` is a method and contains no code. This page shows where it sits in an agent's loop and
 which pieces of your existing tooling it relies on.
 
 ## The two loops
@@ -18,7 +18,7 @@ flowchart LR
 
     T -->|green: agent says done| G
 
-    subgraph gate["field-gate outer loop (slow, frozen for the agent)"]
+    subgraph gate["agent2real outer loop (slow, frozen for the agent)"]
         G[Gate] --> R1[1. Real-log replay<br/>real time, prod code path]
         R1 --> R2[2. Fault injection<br/>on real logs]
         R2 --> R3[3. Placebo + held-out<br/>+ mechanism check]

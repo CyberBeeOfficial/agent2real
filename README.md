@@ -1,8 +1,9 @@
-# field-gate
+# agent2real
 
-**AI-written code passes every test. Then it runs on real hardware and breaks.**
+**sim2real for coding agents.** AI-written code passes every test. Then it runs on real hardware and breaks.
+`agent2real` makes that code earn the real world, one rung at a time.
 
-`field-gate` is a skill for coding agents (Claude Code, or any agent that reads a markdown skill)
+`agent2real` is a skill for coding agents (Claude Code, or any agent that reads a markdown skill)
 working on robots, drones and other real-time edge systems. It stops the agent from making the test
 pass instead of fixing the code, and it decides which changes the bench can clear and which need a
 field test.
@@ -15,7 +16,8 @@ that its coding agents help write. We use it every day.
 A coding agent optimises for the signal you give it. If that signal is "tests green", it will find
 the cheapest way to green, and sometimes that means changing the test instead of fixing the code.
 
-This is overfitting. On hardware it plays out like sim-to-real: everything works on the bench until
+This is overfitting, and it is the same gap robotics already knows as **sim2real**. Here the gap is
+between the agent and the real world, so we call it **agent2real**. On hardware it plays out the same way: everything works on the bench until
 real sensors, real timing and real faults are involved. And on a drone, a bad change usually shows
 up as a crash rather than on a dashboard.
 
@@ -67,12 +69,12 @@ of those would have arrived at the field labelled "tests pass".
 Claude Code:
 
 ```bash
-git clone https://github.com/CyberBeeOfficial/field-gate.git
-cp -r field-gate/skills/field-gate ~/.claude/skills/
+git clone https://github.com/CyberBeeOfficial/agent2real.git
+cp -r agent2real/skills/agent2real ~/.claude/skills/
 ```
 
 The agent then applies the skill whenever it's about to call hardware-facing work done. Other agents:
-put `skills/field-gate/SKILL.md` in the agent's instructions or rules file.
+put `skills/agent2real/SKILL.md` in the agent's instructions or rules file.
 
 The skill describes a method, so there's nothing to run. It works with whatever replay tool, scorer
 and log format you already have.
